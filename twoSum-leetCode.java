@@ -23,14 +23,14 @@ class Solution2{
   public int[] twoSum(int[] nums, int target) {
     HashMap<Integer, Integer> map = new HashMap<>();         // stores integer (key, value) pair
       for (int i = 0; i < nums.length; i++) {                 // loop fills out the hashmap
-        map.put(nums[i], i)                                   // stores index and value
+        map.put(nums[i], i);                                   // stores index and value
     }
 
     for (int i = 0; i < nums.length; i++) {
 
       int difference = target - nums[i];
 
-       if(map.containsKey(difference) && map.get(difference) ! = i) {           // check to see if values plus hashmap value adds to target
+       if(map.containsKey(difference) && map.get(difference) != i) {           // check to see if values plus hashmap value adds to target
           return new int[] {map.get(difference), i};
       }
     }
