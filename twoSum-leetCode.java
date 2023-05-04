@@ -21,6 +21,15 @@ class Solution {
 
 // better solution is hashmap with linear look up time
 
+// create a new hashmap
+// loop through index of the array
+// map.put the index of the array and the value into the map
+// loop through the array nums
+// for each element in the array calculate the difference of the target - element of the array by index
+// check if the map.containsKey (the value of difference) and get the difference not equal to i
+// return a new array with type of int with map.get difference , i ( two values for solution)
+// else return nums array
+
 class Solution2{
   public int[] twoSum(int[] nums, int target) {
     HashMap<Integer, Integer> map = new HashMap<>();         // stores integer (key, value) pair
