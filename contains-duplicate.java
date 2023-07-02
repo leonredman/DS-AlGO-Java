@@ -1,6 +1,27 @@
 import java.util.HashSet;
 
-// we can use a HashSet
+// Brute Force Solution:
+// start with each element in the array  and loop thru and try to find the duplicate
+// start with first element and traverse thru. Then the second element etc.
+// If you dont find one, you return false.
+// The time complexity is bad 'O(n)squared' as it takes alot of time over large arrays.
+  
+class Solution {
+  public boolean containsDuplicate(int[] nums) {
+    for(int i = 0; i < nums.length;i++) {
+    for (int j = i+1; j < nums.length; j++){
+    if( nums[i] == nums[j]) {
+      return true;
+    }
+   }
+  }
+  return false;
+ }
+}
+
+
+// Optimal Solution using HashSet
+// Hash Set does not have any duplicate values
 // we loop thru the array and check if the HashSet "contains" the value of the array at the index i
 // then we can return true;
 // otherwise we simply add the value to the HashSet
