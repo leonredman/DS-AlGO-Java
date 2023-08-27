@@ -18,8 +18,8 @@ class Solution {
       return nums;
   }
 }
-
-// better solution is hashmap with linear look up time
+// brute for solution is O(n^2) {O of n squared} as nested for loops are used
+// A better solution is hashmap with linear look up time
 
 // create a new hashmap
 // loop through index of the array
